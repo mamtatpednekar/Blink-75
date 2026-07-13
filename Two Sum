@@ -1,0 +1,11 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        hashed = {} #val -> i
+        for i,n in enumerate(nums):
+            diff = target - n
+            if diff in hashed:
+                return [hashed[diff], i]
+            hashed[n] = i
+
+
+        
